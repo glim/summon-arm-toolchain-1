@@ -63,37 +63,11 @@ QUIET=
 By default set to 0. To decrease console output (may increase compile speed
 in some cases) you can set this variable to 1.
 
-USE_LINARO=
------------
-
-By default set to 1. To disable the usage of the Linaro GCC and use of the
-vanilla GCC instead set to 0.
-
 OOCD_EN=
 --------
 
 By default set to 1. To disable compilation of OpenOCD JTAG programming
 software set to 0.
-
-LIBSTM32_EN=
-------------
-
-By default set to 0. To enable compilation of the non-free libstm32 library
-set to 1.
-
-LIBOPENSTM32_EN=
-----------------
-
-By default set to 1. To disable compilation of the open source libopenstm32
-library set to 0.
-
-DEFAULT_TO_CORTEX_M3=
----------------------
-
-By default set to 0. To enable compilation of binutils and GCC to generate code
-for the Cortex-M3 ARM architecture by default set to 1. Tests have shown that
-using these options is not very reliable and is discouraged. It is more
-reliable to add the necessary options to your build environment instead.
 
 CPUS=
 -----
