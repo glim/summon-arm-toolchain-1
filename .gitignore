@@ -3,3 +3,4 @@ scratch
 stamps
 .DS_Store
 build
+.*.swp
