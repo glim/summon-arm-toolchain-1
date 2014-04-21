@@ -86,8 +86,8 @@ echo "CPUS=$CPUS"
 # Version and download url settings section
 ##############################################################################
 # For Linaro GCC:
-GCCRELEASE=4.8-2013.09
-GCCVERSION=4.8-2013.09
+GCCRELEASE=4.8-2014.03
+GCCVERSION=4.8-2014.03
 GCC=gcc-linaro-${GCCVERSION}
 GCCURL=https://launchpad.net/gcc-linaro/4.8/${GCCRELEASE}/+download/${GCC}.tar.xz
 
@@ -99,7 +99,7 @@ GDBURL=https://launchpad.net/gdb-linaro/7.6/${GDBRELEASE}/+download/${GDB}.tar.b
 
 BINUTILS=binutils-2.23.2
 NEWLIB=newlib-2.0.0
-OOCD=openocd-0.7.0
+OOCD=openocd-0.8.0-rc2
 OOCD_GIT=
 
 ##############################################################################
@@ -267,7 +267,7 @@ fetch ${GDB} ${GDBURL}
 
 if [ ${OOCD_EN} != 0 ]; then
 	if [ "x${OOCD_GIT}" == "x" ]; then
-		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.7.0/${OOCD}.tar.bz2
+		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.8.0-rc2/${OOCD}.tar.bz2
 	else
 		clone oocd ${OOCD_GIT} git://openocd.git.sourceforge.net/gitroot/openocd/openocd ./bootstrap
 	fi
@@ -398,7 +398,7 @@ if [ ! -e ${STAMPS}/${OOCD}.build ]; then
 				 --disable-werror \
 				 --prefix=${PREFIX} \
 				 --enable-dummy \
-				 --enable-ft2232_libftdi \
+				 --enable-ftdi \
 				 --enable-usb_blaster_libftdi \
 				 --enable-ep93xx \
 				 --enable-at91rm9200 \
