@@ -99,7 +99,7 @@ GDBURL=https://launchpad.net/gdb-linaro/7.6/${GDBRELEASE}/+download/${GDB}.tar.b
 
 BINUTILS=binutils-2.23.2
 NEWLIB=newlib-2.0.0
-OOCD=openocd-0.8.0-rc2
+OOCD=openocd-0.8.0
 OOCD_GIT=
 
 ##############################################################################
@@ -267,7 +267,7 @@ fetch ${GDB} ${GDBURL}
 
 if [ ${OOCD_EN} != 0 ]; then
 	if [ "x${OOCD_GIT}" == "x" ]; then
-		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.8.0-rc2/${OOCD}.tar.bz2
+		fetch ${OOCD} http://sourceforge.net/projects/openocd/files/openocd/0.8.0/${OOCD}.tar.bz2
 	else
 		clone oocd ${OOCD_GIT} git://openocd.git.sourceforge.net/gitroot/openocd/openocd ./bootstrap
 	fi
