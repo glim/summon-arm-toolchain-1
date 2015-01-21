@@ -1,3 +1,9 @@
+Prereqs
+========
+Install OSX command-line tools (try to run 'git' in terminal for prompt).
+Install Homebrew (http://brew.sh)
+brew install gmp libmpc mpfr texinfo libusb-compat libftdi
+
 REMEMBER!
 =========
 THE RESULTING TOOLCHAIN IS FOR BARE BONE ARM PROCESSOR SOFTWARE. NOT FOR USE
